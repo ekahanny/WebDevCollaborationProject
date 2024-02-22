@@ -1,4 +1,7 @@
 # WebDevCollaborationProject
+
 Repository Tugas Kelompok 4 - FS Stechoq
 
-## test 
+## Author
+
+- Github - [Eka Hanny](https://github.com/ekahanny)
