@@ -6,4 +6,4 @@ Repository Tugas Kelompok 4 - FS Stechoq
 
 - Github - [Eka Hanny](https://github.com/ekahanny)
 - Github - [Khaeril Anwar](https://github.com/khaerilanwar)
-- Github - [Pandu Wicaksono] (https://github.com/panduwiicaksono)
+- Github - [Pandu_Wicaksono] (https://github.com/panduwiicaksono)
