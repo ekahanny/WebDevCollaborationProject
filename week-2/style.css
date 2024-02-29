@@ -47,3 +47,28 @@ body {
 img {
   width: 400px;
 }
+
+#name,
+#email,
+#telephone,
+#password,
+#passwordConfirm {
+  width: 20rem;
+  border-radius: 8px;
+  border: 1px solid #999;
+  min-height: 2.5rem;
+  margin-top: 8px;
+  padding: 5px 25px;
+}
+
+#btnSubmit {
+  width: 100%;
+  background-color: #00c9b7;
+  color: white;
+  margin-top: 20px;
+  min-height: 2.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 15px;
+}
