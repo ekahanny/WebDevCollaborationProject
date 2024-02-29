@@ -3,6 +3,39 @@
   margin: 0;
 }
 
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #3fbfef,
+    #90ccf9,
+    #c2dafc,
+    #e7ebfd,
+    #ffffff
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.img-container {
+  flex: 1;
+}
+
+.img-container img {
+  max-width: 100%;
+}
+
 img {
   width: 400px;
 }
