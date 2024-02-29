@@ -18,6 +18,13 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   /* background-color: white; */
   display: flex;
@@ -38,6 +45,7 @@ body {
 
 .img-container {
   flex: 1;
+  margin-right: 30px;
 }
 
 .img-container img {
@@ -63,6 +71,7 @@ img {
 
 #btnSubmit {
   width: 100%;
+  font-family: "Poppins", sans-serif;
   background-color: #00c9b7;
   color: white;
   margin-top: 20px;
@@ -71,4 +80,11 @@ img {
   font-weight: 700;
   font-size: 15px;
   padding: 15px;
+  border: none;
+}
+
+@media only screen and (min-width: 600px) {
+  img {
+    width: 800px;
+  }
 }
