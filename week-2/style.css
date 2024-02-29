@@ -3,9 +3,45 @@
   margin: 0;
 }
 
-
 body {
-  background-color: brown;
+  background-image: linear-gradient(
+    to right bottom,
+    #3fbfef,
+    #90ccf9,
+    #c2dafc,
+    #e7ebfd,
+    #ffffff
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  max-width: 50rem;
+  min-height: 40rem;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.img-container {
+  flex: 1;
+}
+
+.img-container img {
+  max-width: 100%;
 }
 
 img {
