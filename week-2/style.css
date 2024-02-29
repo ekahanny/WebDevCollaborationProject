@@ -80,11 +80,7 @@ img {
   font-weight: 700;
   font-size: 15px;
   padding: 15px;
-  border: none;
 }
-
-@media only screen and (min-width: 600px) {
-  img {
-    width: 800px;
-  }
+#btnSubmit:hover {
+  background-color: #009c8e;
 }
