@@ -17,3 +17,33 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  max-width: 50rem;
+  min-height: 40rem;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.img-container {
+  flex: 1;
+}
+
+.img-container img {
+  max-width: 100%;
+}
+
+img {
+  width: 400px;
+}
