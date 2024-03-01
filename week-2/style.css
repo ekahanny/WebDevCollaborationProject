@@ -20,6 +20,7 @@ body {
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
+  text-decoration: wavy;
   color: white;
   align-self: flex-start;
   position: absolute;
@@ -27,6 +28,8 @@ h1 {
   left: 40%;
   font-size: 50px;
   text-shadow: 2px 2px 2px black;
+  font-style: italic;
+  margin-top: 15px;
 }
 
 .container {
@@ -92,12 +95,38 @@ img {
 }
 
 @media only screen and (max-width: 375px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   .container {
     display: flex;
     flex-direction: column-reverse;
+    padding: 0rem;
+    min-height: 30rem;
   }
 
   img {
-    width: 300px;
+    width: 150px;
+    margin-left: 28px;
+  }
+
+  #name,
+  #email,
+  #telephone,
+  #password,
+  #passwordConfirm {
+    width: 15rem;
+    padding: 5px 25px;
+  }
+
+  h1 {
+    top: 32%;
+    left: 28%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
   }
 }
