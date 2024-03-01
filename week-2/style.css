@@ -19,14 +19,17 @@ body {
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: white;
-  display: flex;
-  justify-content: center;
+  align-self: flex-start;
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px black;
 }
 
 .container {
-  /* background-color: white; */
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -36,6 +39,7 @@ h1 {
   gap: 1.25rem;
   padding: 2rem;
   border-radius: 2rem;
+  margin-top: 35px;
 }
 
 .form-container {
@@ -45,7 +49,7 @@ h1 {
 
 .img-container {
   flex: 1;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .img-container img {
@@ -71,7 +75,7 @@ img {
 
 #btnSubmit {
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   background-color: #00c9b7;
   color: white;
   margin-top: 20px;
@@ -80,7 +84,20 @@ img {
   font-weight: 700;
   font-size: 15px;
   padding: 15px;
+  border: none;
 }
+
 #btnSubmit:hover {
   background-color: #009c8e;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  img {
+    width: 300px;
+  }
 }
