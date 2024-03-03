@@ -29,7 +29,7 @@ h1 {
   font-size: 50px;
   text-shadow: 2px 2px 2px black;
   font-style: italic;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .container {
@@ -42,7 +42,7 @@ h1 {
   gap: 1.25rem;
   padding: 2rem;
   border-radius: 2rem;
-  margin-top: 35px;
+  margin-top: 45px;
 }
 
 .form-container {
@@ -92,6 +92,18 @@ img {
 
 #btnSubmit:hover {
   background-color: #009c8e;
+}
+
+p {
+  margin-top: 25px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+
+  /* text-indent: 10px; */
+}
+
+a {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 375px) {
