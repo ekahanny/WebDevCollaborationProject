@@ -57,3 +57,16 @@ tinggiBadan.addEventListener("input", () => {
     tinggiBadan.setAttribute("class", "form-control");
   }
 });
+
+const numberInputs = document.querySelectorAll('.input-angka')
+// validation for input besides number
+numberInputs.forEach(element => {
+  element.addEventListener('input', () => {
+    let valueInput = element.value
+    if (element.id === 'kode_pos') {
+      element.value = valueInput.replace(/[^,\d]/g, '').toString()
+    } else {
+      element.value = valueInput.replace(/[^\+,\d]/g, '').toString()
+    }
+  })
+});
