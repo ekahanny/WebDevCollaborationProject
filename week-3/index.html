@@ -1,149 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administrasi Pasien</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Administrasi Pasien</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="bg-form col-9 mx-auto rounded my-5 p-3">
-      <div class="row align-items-center">
-        <div class="col-md-3 text-center">
-          <img src="assets/images/hero.jpg" alt="Hero Image" class="img-fluid custom-img" />
-        </div>
-        <div class="col-md-9">
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Pendaftaran Pasien Baru</h1>
-              <p class="lead">Klinik Mantul Betul Uhuy Maruhuy</p>
+  <body>
+    <div class="container-fluid">
+      <div class="bg-form col-9 mx-auto rounded my-5 p-3">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center">
+            <img
+              src="assets/images/hero.jpg"
+              alt="Hero Image"
+              class="img-fluid custom-img"
+            />
+          </div>
+          <div class="col-md-9">
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <h1 class="display-4">Pendaftaran Pasien Baru</h1>
+                <p class="lead">Klinik Mantul Betul Uhuy Maruhuy</p>
+              </div>
             </div>
           </div>
         </div>
+        <form action="" id="form-registrasi" class="mx-3">
+          <hr class="my-4" />
+          <h4 class="text-start ms-2">Data Diri</h4>
+          <hr class="my-4" />
+          <!-- <p>KALIAN ISI DISINI</p> -->
+          <div class="mb-4">
+            <label for="inputNama" class="form-label"
+              >Nama Lengkap <span class="text-danger">*</span>
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputNama"
+              placeholder="Nama Lengkap"
+              aria-label="Nama Lengkap"
+              required
+            />
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <label for="inputTanggalLahir" class="form-label"
+                >Tanggal Lahir <span class="text-danger">*</span>
+              </label>
+              <input
+                type="date"
+                class="form-control"
+                id="inputTanggalLahir"
+                aria-label="Tanggal Lahir"
+                required
+              />
+            </div>
+            <div class="col">
+              <label class="form-label d-block"
+                >Jenis Kelamin <span class="text-danger">*</span>
+              </label>
+              <div>
+                <input
+                  type="radio"
+                  id="jkLaki"
+                  name="jenisKelamin"
+                  value="Laki-laki"
+                  required
+                />
+                <label for="jkLaki">Laki-laki</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="jkPerempuan"
+                  name="jenisKelamin"
+                  value="Perempuan"
+                  required
+                />
+                <label for="jkPerempuan">Perempuan</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <label for="inputBerat" class="form-label"
+                >Berat (kg) <span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputBerat"
+                placeholder="Berat (kg)"
+                aria-label="Berat (kg)"
+                required
+              />
+              <div
+                id="beratInvalid"
+                class="invalid-feedback"
+                style="visibility: hidden"
+              >
+                Inputan hanya menerima angka
+              </div>
+            </div>
+            <div class="col">
+              <label for="inputTinggi" class="form-label"
+                >Tinggi (cm) <span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputTinggi"
+                placeholder="Tinggi (cm)"
+                aria-label="Tinggi (cm)"
+                required
+              />
+              <div
+                id="tinggiInvalid"
+                class="invalid-feedback"
+                style="visibility: hidden"
+              >
+                Inputan hanya menerima angka
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="inputStatusPernikahan" class="form-label"
+              >Status Pernikahan <span class="text-danger">*</span>
+            </label>
+            <select
+              class="form-select"
+              id="inputStatusPernikahan"
+              aria-label="Status Pernikahan"
+              required
+            >
+              <option value="" selected disabled>
+                Pilih Status Pernikahan...
+              </option>
+              <option value="Belum Menikah">Belum Menikah</option>
+              <option value="Menikah">Menikah</option>
+              <option value="Cerai">Bercerai</option>
+            </select>
+          </div>
+          <hr class="my-4" />
+          <h4 class="text-start ms-2">Kontak Pasien</h4>
+          <hr class="my-4" />
+
+          <div class="row mb-4">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="whatsapp" class="form-label"
+                  >Whatsapp <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control input-angka"
+                  id="whatsapp"
+                  placeholder="Nomor whatsapp aktif"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="alamat" class="form-label"
+                  >Alamat <span class="text-danger">*</span></label
+                >
+                <textarea
+                  class="form-control"
+                  id="alamat"
+                  rows="1"
+                  placeholder="Detail alamat, nama jalan"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="provinsi" class="form-label"
+                  >Provinsi <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="provinsi"
+                  placeholder="Nama Provinsi"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="email" class="form-label">Alamat Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Alamat email aktif"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="kota" class="form-label"
+                  >Kota <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kota"
+                  placeholder="Kota tinggal saat ini"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="kode_pos" class="form-label">Kode Pos</label>
+                <input
+                  type="text"
+                  class="form-control input-angka"
+                  id="kode_pos"
+                  placeholder="Kode pos"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <hr class="my-4" />
+            <h4 class="text-start ms-2">Riwayat Pengobatan</h4>
+            <hr class="my-4" />
+
+            <label class="form-label d-block"
+              >Apakah sedang mengonsumsi obat-obatan saat ini?</label
+            >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="IyaTidak"
+                id="IyaCheck"
+                onclick="IyaTidakCheck()"
+              />
+              <label class="form-check-label" for="IyaCheck"> iya </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="IyaTidak"
+                id="TidakCheck"
+                onclick="IyaTidakCheck()"
+              />
+              <label class="form-check-label" for="TidakCheck"> tidak </label>
+            </div>
+
+            <div id="JikaIya" style="visibility: hidden">
+              <label class="form-label d-block">Jika iya, coba jelaskan</label>
+              <textarea
+                class="form-control"
+                id="iya"
+                name="iya"
+                aria-label="With textarea"
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit mt-3">Registrasi</button>
+        </form>
+        <button
+          type="button"
+          class="btn btn-light btn-floating btn-lg"
+          id="btn-back-to-top"
+        >
+          <i class="bi bi-arrow-up"></i>
+        </button>
       </div>
-      <form action="" id="form-registrasi" class="mx-3">
-        <hr class="my-4" />
-        <h4 class="text-start ms-2">Data Diri</h4>
-        <hr class="my-4" />
-        <!-- <p>KALIAN ISI DISINI</p> -->
-        <div class="mb-4">
-          <label for="inputNama" class="form-label">Nama Lengkap <span class="text-danger">*</span>
-          </label>
-          <input type="text" class="form-control" id="inputNama" placeholder="Nama Lengkap" aria-label="Nama Lengkap"
-            required />
-        </div>
-        <div class="row mb-4">
-          <div class="col">
-            <label for="inputTanggalLahir" class="form-label">Tanggal Lahir <span class="text-danger">*</span>
-            </label>
-            <input type="date" class="form-control" id="inputTanggalLahir" aria-label="Tanggal Lahir" required />
-          </div>
-          <div class="col">
-            <label class="form-label d-block">Jenis Kelamin <span class="text-danger">*</span>
-            </label>
-            <div>
-              <input type="radio" id="jkLaki" name="jenisKelamin" value="Laki-laki" required />
-              <label for="jkLaki">Laki-laki</label>
-            </div>
-            <div>
-              <input type="radio" id="jkPerempuan" name="jenisKelamin" value="Perempuan" required />
-              <label for="jkPerempuan">Perempuan</label>
-            </div>
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col">
-            <label for="inputBerat" class="form-label">Berat (kg) <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" id="inputBerat" placeholder="Berat (kg)" aria-label="Berat (kg)"
-              required />
-            <div id="beratInvalid" class="invalid-feedback" style="visibility: hidden">
-              Inputan hanya menerima angka
-            </div>
-          </div>
-          <div class="col">
-            <label for="inputTinggi" class="form-label">Tinggi (cm) <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" id="inputTinggi" placeholder="Tinggi (cm)" aria-label="Tinggi (cm)"
-              required />
-            <div id="tinggiInvalid" class="invalid-feedback" style="visibility: hidden">
-              Inputan hanya menerima angka
-            </div>
-          </div>
-        </div>
-        <div class="mb-4">
-          <label for="inputStatusPernikahan" class="form-label">Status Pernikahan <span class="text-danger">*</span>
-          </label>
-          <select class="form-select" id="inputStatusPernikahan" aria-label="Status Pernikahan" required>
-            <option value="" selected disabled>
-              Pilih Status Pernikahan...
-            </option>
-            <option value="Belum Menikah">Belum Menikah</option>
-            <option value="Menikah">Menikah</option>
-            <option value="Cerai">Bercerai</option>
-          </select>
-        </div>
-        <hr class="my-4" />
-        <h4 class="text-start ms-2">Kontak Pasien</h4>
-        <hr class="my-4" />
-
-        <div class="row mb-4">
-          <div class="col-sm-6">
-            <div class="mb-3">
-              <label for="whatsapp" class="form-label">Whatsapp <span class="text-danger">*</span></label>
-              <input type="text" class="form-control input-angka" id="whatsapp" placeholder="Nomor whatsapp aktif"
-                required>
-            </div>
-            <div class="mb-3">
-              <label for="alamat" class="form-label">Alamat <span class="text-danger">*</span></label>
-              <textarea class="form-control" id="alamat" rows="1" placeholder="Detail alamat, nama jalan"
-                required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="provinsi" class="form-label">Provinsi <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="provinsi" placeholder="Nama Provinsi" required>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="mb-3">
-              <label for="email" class="form-label">Alamat Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Alamat email aktif">
-            </div>
-            <div class="mb-3">
-              <label for="kota" class="form-label">Kota <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="kota" placeholder="Kota tinggal saat ini" required>
-            </div>
-            <div class="mb-3">
-              <label for="kode_pos" class="form-label">Kode Pos</label>
-              <input type="text" class="form-control input-angka" id="kode_pos" placeholder="Kode pos">
-            </div>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-submit">Registrasi</button>
-      </form>
-      <button type="button" class="btn btn-light btn-floating btn-lg" id="btn-back-to-top">
-        <i class="bi bi-arrow-up"></i>
-      </button>
     </div>
-  </div>
-  <!-- Bootstrap JavaScript dan jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-    crossorigin="anonymous"></script>
-  <script src="assets/main.js"></script>
-</body>
-
+    <!-- Bootstrap JavaScript dan jQuery -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/main.js"></script>
+  </body>
 </html>

@@ -58,15 +58,21 @@ tinggiBadan.addEventListener("input", () => {
   }
 });
 
-const numberInputs = document.querySelectorAll('.input-angka')
+const numberInputs = document.querySelectorAll(".input-angka");
 // validation for input besides number
-numberInputs.forEach(element => {
-  element.addEventListener('input', () => {
-    let valueInput = element.value
-    if (element.id === 'kode_pos') {
-      element.value = valueInput.replace(/[^,\d]/g, '').toString()
+numberInputs.forEach((element) => {
+  element.addEventListener("input", () => {
+    let valueInput = element.value;
+    if (element.id === "kode_pos") {
+      element.value = valueInput.replace(/[^,\d]/g, "").toString();
     } else {
-      element.value = valueInput.replace(/[^\+,\d]/g, '').toString()
+      element.value = valueInput.replace(/[^\+,\d]/g, "").toString();
     }
-  })
+  });
 });
+
+function IyaTidakCheck() {
+  if (document.getElementById("IyaCheck").checked) {
+    document.getElementById("JikaIya").style.visibility = "visible";
+  } else document.getElementById("JikaIya").style.visibility = "hidden";
+}
