@@ -147,6 +147,30 @@
           </div>
           <hr class="my-4" />
 
+          <div>
+            <hr class="my-4" />
+            <h4 class="text-start ms-2">Riwayat Pengobatan</h4>
+            <hr class="my-4" />
+
+            <label class="form-label d-block">Apakah sedang mengonsumsi obat-obatan saat ini?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="IyaTidak" id="IyaCheck" onclick="IyaTidakCheck()">
+              <label class="form-check-label" for="IyaCheck">
+                iya
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="IyaTidak" id="TidakCheck" onclick="IyaTidakCheck()">
+              <label class="form-check-label" for="TidakCheck">
+                tidak
+              </label>
+            </div>
+
+            <div id="JikaIya" style="visibility:hidden">
+              <label class="form-label d-block">Jika iya, coba jelaskan</label>
+              <textarea class="form-control" id="iya" name="iya" aria-label="With textarea"></textarea>
+            </div>
+           </div>
           <button type="submit" class="btn-submit">Registrasi</button>
         </form>
         <button

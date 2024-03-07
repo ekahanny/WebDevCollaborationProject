@@ -57,3 +57,12 @@ tinggiBadan.addEventListener("input", () => {
     tinggiBadan.setAttribute("class", "form-control");
   }
 });
+
+
+function IyaTidakCheck() {
+  if (document.getElementById('IyaCheck').checked) {
+      document.getElementById('JikaIya').style.visibility = 'visible';
+  }
+  else document.getElementById('JikaIya').style.visibility = 'hidden';
+
+}
