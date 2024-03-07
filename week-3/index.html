@@ -49,6 +49,7 @@
               id="inputNama"
               placeholder="Nama Lengkap"
               aria-label="Nama Lengkap"
+              required
             />
           </div>
           <div class="row mb-4">
@@ -61,6 +62,7 @@
                 class="form-control"
                 id="inputTanggalLahir"
                 aria-label="Tanggal Lahir"
+                required
               />
             </div>
             <div class="col">
@@ -71,6 +73,7 @@
                   id="jkLaki"
                   name="jenisKelamin"
                   value="Laki-laki"
+                  required
                 />
                 <label for="jkLaki">Laki-laki</label>
               </div>
@@ -80,6 +83,7 @@
                   id="jkPerempuan"
                   name="jenisKelamin"
                   value="Perempuan"
+                  required
                 />
                 <label for="jkPerempuan">Perempuan</label>
               </div>
@@ -94,7 +98,15 @@
                 id="inputBerat"
                 placeholder="Berat (kg)"
                 aria-label="Berat (kg)"
+                required
               />
+              <div
+                id="beratInvalid"
+                class="invalid-feedback"
+                style="visibility: hidden"
+              >
+                Inputan hanya menerima angka
+              </div>
             </div>
             <div class="col">
               <label for="inputTinggi" class="form-label">Tinggi (cm)</label>
@@ -104,7 +116,15 @@
                 id="inputTinggi"
                 placeholder="Tinggi (cm)"
                 aria-label="Tinggi (cm)"
+                required
               />
+              <div
+                id="tinggiInvalid"
+                class="invalid-feedback"
+                style="visibility: hidden"
+              >
+                Inputan hanya menerima angka
+              </div>
             </div>
           </div>
           <div class="mb-4">
@@ -116,7 +136,9 @@
               id="inputStatusPernikahan"
               aria-label="Status Pernikahan"
             >
-              <option selected>Pilih Status Pernikahan...</option>
+              <option id="option1" selected disabled>
+                Pilih Status Pernikahan...
+              </option>
               <option value="Belum Menikah">Belum Menikah</option>
               <option value="Menikah">Menikah</option>
               <option value="Cerai">Bercerai</option>
