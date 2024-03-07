@@ -1,3 +1,5 @@
+const statusPernikahan = document.getElementById("inputStatusPernikahan");
+
 // BUTTON BACK TO TOP
 let toTopButton = document.getElementById("btn-back-to-top");
 
@@ -23,16 +25,6 @@ document
 
     window.location.href = "succes-page.html";
   });
-
-// Required untuk status pernikahan
-const statusPernikahan = document.getElementById("inputStatusPernikahan");
-statusPernikahan.addEventListener("change", function () {
-  if (statusPernikahan.value === "") {
-    statusPernikahan.setAttribute("required", "");
-  } else {
-    statusPernikahan.removeAttribute("required");
-  }
-});
 
 // Validasi Number untuk Tinggi & Berat Badan
 const tinggiBadan = document.getElementById("inputTinggi");
