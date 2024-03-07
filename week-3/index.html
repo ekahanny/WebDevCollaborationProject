@@ -231,7 +231,7 @@
             </div>
           </div>
 
-          <div>
+          <div >
             <hr class="my-4" />
             <h4 class="text-start ms-2">Riwayat Pengobatan</h4>
             <hr class="my-4" />
@@ -249,6 +249,7 @@
               />
               <label class="form-check-label" for="IyaCheck"> iya </label>
             </div>
+
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -260,14 +261,71 @@
               <label class="form-check-label" for="TidakCheck"> tidak </label>
             </div>
 
-            <div id="JikaIya" style="visibility: hidden">
-              <label class="form-label d-block">Jika iya, coba jelaskan</label>
+            <div class="mb-4" id="JikaIya" style="visibility: hidden">
+              <class=form-label d-block> Jika iya, coba jelaskan <span class="text-danger">*</span>
+              </label>
               <textarea
                 class="form-control"
                 id="iya"
                 name="iya"
                 aria-label="With textarea"
               ></textarea>
+            </div>
+            
+            <div class="mb-4">
+              <label for="NamaWali" class="form-label">Nama Lengkap Wali</label>
+              <input
+                type="text"
+                class="form-control"
+                id="NamaWali"
+                placeholder="Nama Lengkap Wali"
+                />
+            </div>
+
+            <label class="form-label d-block"
+              >Hubungan Wali?</label
+            >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Wali"
+                id="OrangtuaCheck"
+                onclick="OtherWaliCheck()"
+              />
+              <label class="form-check-label" for="OrangtuaCheck"> Orangtua </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Wali"
+                id="OtherCheck"
+                onclick="OtherWaliCheck()"
+              />
+              <label class="form-check-label" for="OtherCheck"> Other </label>
+            </div>
+
+            <div class="mb-4" id="JikaOther" style="visibility:hidden">
+              <class=form-label d-block> Tuliskan Hubungan Dengan wali  
+              </label> 
+              <textarea
+                class="form-control"
+                id="other"
+                name="other"
+                aria-label="With textarea"
+              ></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="WhatsappWali" class="form-label">Nomor Whatsapp Wali</label>
+              <input
+                type="text"
+                class="form-control input-angka"
+                id="WhatsappWali"
+                placeholder="Nomor Whatsapp Wali"
+              />
             </div>
           </div>
 

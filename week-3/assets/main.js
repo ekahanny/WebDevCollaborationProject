@@ -76,3 +76,9 @@ function IyaTidakCheck() {
     document.getElementById("JikaIya").style.visibility = "visible";
   } else document.getElementById("JikaIya").style.visibility = "hidden";
 }
+
+function OtherWaliCheck() {
+  if (document.getElementById("OtherCheck").checked) {
+    document.getElementById("JikaOther").style.visibility = "visible";
+  } else document.getElementById("JikaOther").style.visibility = "hidden";
+}
