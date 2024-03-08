@@ -154,8 +154,92 @@
             </select>
           </div>
           <hr class="my-4" />
-
-          <button type="submit" class="btn-submit">Registrasi</button>
+          <div class="mb-4">
+            <h4 class="text-start ms-2">Identitas Pembayar</h4>
+            <hr class="my-4" />
+            <div class="mb-4">
+              <label for="inputNamaBayar" class="form-label"
+                >Nama Pembayar  <span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputNamaBayar"
+                placeholder="Nama Pembayar"
+                aria-label="Nama Pembayar"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="inputAlamatBayar" class="form-label"
+              >Alamat Pembayar <span class="text-danger">*</span>
+            </label>
+            <textarea class="form-control" 
+            id="inputNamaBayar" 
+            placeholder="Alamat Pembayar" 
+            aria-label="Alamat Pembayar" 
+            required></textarea>
+          </div>
+          <div class="mb-4">
+            <label for="inputJenisBayar" class="form-label">
+              Jenis Pembayaran <span class="text-danger">*</span>
+            </label>
+            <div class="row">
+              <div class="col">
+                <input
+                  type="radio"
+                  onclick="lainnyaChecked();"
+                  id="jptunai"
+                  name="jenisbayar"
+                  value="tunai"
+                  required
+                />
+                <label for="jptunai">Tunai/Cash</label>
+              </div>
+              <div class="col">
+                <input
+                  type="radio"
+                  onclick="lainnyaChecked();"
+                  id="jpaskes"
+                  name="jenisbayar"
+                  value="askes"
+                  required
+                />
+                <label for="jpaskes">Askes/Asuransi lain</label>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <input
+                  type="radio"
+                  onclick="lainnyaChecked();"
+                  id="jpperusahaan"
+                  name="jenisbayar"
+                  value="perusahaan"
+                  required
+                />
+                <label for="jpperusahaan">Jaminan Perusahaan</label>
+              </div>
+              <div class="col">
+                <input
+                    type="radio"
+                    onclick="lainnyaChecked();"
+                    id="jplain"
+                    name="jenisbayar"
+                    value="lain"
+                    required
+                />
+                <label for="jplain">Lainnya</label>
+                <div id="ifYes" style="visibility:hidden">
+                  <input
+                  class="form-control"
+                  type='text' 
+                  id='yes' 
+                  name='yes'>
+                </div> <br>
+            </div>
+            <button type="submit" class="btn-submit mt-3">Registrasi</button>
         </form>
         <button
           type="button"

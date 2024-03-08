@@ -18,13 +18,18 @@ toTopButton.addEventListener("click", () => {
 });
 
 // BUTTON SUBMIT
-document
-  .getElementById("form-registrasi")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+document.getElementById('form-registrasi').addEventListener('submit', function (event) {
+	event.preventDefault()
+	submitForm()
+})
 
-    window.location.href = "succes-page.html";
-  });
+function submitForm() {
+	var userConfirmed = window.confirm('Apakah kamu yakin data yang dimasukkan sudah benar?')
+
+	if (userConfirmed) {
+		window.location.href = 'succes-page.html'
+	}
+}
 
 // Validasi Number untuk Tinggi & Berat Badan
 const tinggiBadan = document.getElementById("inputTinggi");
@@ -57,3 +62,12 @@ tinggiBadan.addEventListener("input", () => {
     tinggiBadan.setAttribute("class", "form-control");
   }
 });
+ // bayar lainnya
+function lainnyaChecked() {
+  if 
+  (document.getElementById('jplain').checked){
+    document.getElementById('ifYes').style.visibility = 'visible';
+  }
+  else 
+  document.getElementById('ifYes').style.visibility = 'hidden';
+}
