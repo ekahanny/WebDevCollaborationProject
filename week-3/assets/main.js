@@ -22,9 +22,18 @@ document
   .getElementById("form-registrasi")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-
-    window.location.href = "succes-page.html";
+    submitForm();
   });
+
+function submitForm() {
+  var userConfirmed = window.confirm(
+    "Apakah kamu yakin data yang dimasukkan sudah benar?"
+  );
+
+  if (userConfirmed) {
+    window.location.href = "succes-page.html";
+  }
+}
 
 // Validasi Number untuk Tinggi & Berat Badan
 const tinggiBadan = document.getElementById("inputTinggi");
@@ -81,4 +90,10 @@ function OtherWaliCheck() {
   if (document.getElementById("OtherCheck").checked) {
     document.getElementById("JikaOther").style.visibility = "visible";
   } else document.getElementById("JikaOther").style.visibility = "hidden";
+}
+
+function lainnyaChecked() {
+  if (document.getElementById("jplain").checked) {
+    document.getElementById("ifYes").style.visibility = "visible";
+  } else document.getElementById("ifYes").style.visibility = "hidden";
 }
