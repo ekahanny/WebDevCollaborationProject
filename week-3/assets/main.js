@@ -1,5 +1,3 @@
-const statusPernikahan = document.getElementById("inputStatusPernikahan");
-
 // BUTTON BACK TO TOP
 let toTopButton = document.getElementById("btn-back-to-top");
 
