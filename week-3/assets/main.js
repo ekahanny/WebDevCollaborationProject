@@ -91,7 +91,13 @@ function OtherWaliCheck() {
 }
 
 function lainnyaChecked() {
-  if (document.getElementById("jplain").checked) {
-    document.getElementById("ifYes").style.visibility = "visible";
-  } else document.getElementById("ifYes").style.visibility = "hidden";
+  var ifYesElement = document.getElementById("ifYes");
+  var jplainCheckbox = document.getElementById("jplain");
+
+  if (jplainCheckbox.checked) {
+    ifYesElement.style.visibility = "visible";
+    ifYesElement.setAttribute("required");
+  } else {
+    ifYesElement.style.visibility = "hidden";
+  }
 }
