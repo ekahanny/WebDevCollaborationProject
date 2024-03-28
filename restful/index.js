@@ -61,10 +61,10 @@ api.put('/tasks/:id', (req, res) => {
 		return res.status(404).json({ error: 'Task not found' })
 	}
 
-  // Periksa apakah ID yang dikirim oleh pengguna sesuai dengan ID asli
-  if (id !== req.body.id) {
-    return res.status(400).json({ error: 'ID cannot be modified' });
-}
+	// Periksa apakah ID yang dikirim oleh pengguna sesuai dengan ID asli
+	if (req.body.id && id !== req.body.id) {
+		return res.status(400).json({ error: 'ID cannot be modified' })
+	}
 
 	// Memperbarui task dengan data baru
 	data[taskIndex] = { ...data[taskIndex], ...req.body }
