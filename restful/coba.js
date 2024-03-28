@@ -1,20 +1,9 @@
-const fs = require("node:fs")
-const data = fs.readFileSync('data.json', "utf8")
-const dataJson = JSON.parse(fs.readFileSync('data.json', "utf8"))
+const fs = require('node:fs')
+const data = fs.readFileSync('data.json', 'utf8')
+const dataJson = JSON.parse(fs.readFileSync('data.json', 'utf8'))
 
-const oneData = dataJson.filter(task => task.id == '3')
+const oneData = dataJson.filter((task) => task.id == '3')
 console.log(dataJson)
-
-
-
-
-
-
-
-
-
-
-
 
 // const dataBaru = {
 //     id: 4,
