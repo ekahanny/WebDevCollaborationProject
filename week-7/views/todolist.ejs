@@ -1,0 +1,28 @@
+<%- include('layouts/tabs') %>
+
+    <% if (msg.length !==0) { %>
+        <div class="alert alert-success mt-3" role="alert">
+            <%= msg %>
+        </div>
+        <% } %>
+
+            <ol class="list-group list-group-numbered mt-3">
+                <% tasks.forEach(task=> { %>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">
+                                <%= task.nama_tugas %>
+                            </div>
+                            <%= task.deskripsi %> <br>
+                                Deadline: <%= task.deadline.toLocaleDateString('id-ID', {weekday: 'long' ,
+                                    day: 'numeric' , month: 'long' , year: 'numeric' }) %> <br>
+                                    Status : <span class="badge text-bg-warning">Belum dikerjakan</span>
+                        </div>
+                        <form action="/todolist?_method=PUT" method="post">
+                            <input type="hidden" value="<%= task.id %>" name="id">
+                            <button type="submit" class="btn btn-secondary"
+                                onclick="return confirm('Apakah sudah selesai ?')">Sudah Selesai ?</button>
+                        </form>
+                    </li>
+                    <% }) %>
+            </ol>

@@ -1,0 +1,17 @@
+<%- include('layouts/tabs') %>
+
+    <form method="post" action="/todolist">
+        <div class="mb-3">
+            <label for="nama_tugas" class="form-label">Nama Tugas</label>
+            <input type="text" class="form-control" id="nama_tugas" name="nama_tugas">
+        </div>
+        <div class="mb-3">
+            <label for="deadline" class="form-label">Tenggat Waktu</label>
+            <input type="date" class="form-control" id="deadline" name="deadline">
+        </div>
+        <div class="mb-3">
+            <label for="deskripsi" class="form-label">Deskripsi</label>
+            <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Tambah</button>
+    </form>
