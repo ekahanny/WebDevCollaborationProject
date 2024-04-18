@@ -14,7 +14,7 @@
                                 <%= task.nama_tugas %>
                             </div>
                             <%= task.deskripsi %> <br>
-                                Deadline: <%= task.deadline.toLocaleDateString('id-ID', {weekday: 'long' ,
+                                Deadline: <%= new Date(task.deadline).toLocaleDateString('id-ID', {weekday: 'long' ,
                                     day: 'numeric' , month: 'long' , year: 'numeric' }) %> <br>
                                     Status : <span class="badge text-bg-warning">Belum dikerjakan</span>
                         </div>

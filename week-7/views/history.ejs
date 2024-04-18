@@ -8,8 +8,8 @@
                         <%= task.nama_tugas %>
                     </div>
                     <%= task.deskripsi %> <br>
-                        Deadline: <%= task.deadline.toLocaleDateString('id-ID', {weekday: 'long' , day: 'numeric' ,
-                            month: 'long' , year: 'numeric' }) %> <br>
+                        Deadline: <%= new Date(task.deadline).toLocaleDateString('id-ID', {weekday: 'long' ,
+                            day: 'numeric' , month: 'long' , year: 'numeric' }) %> <br>
                             Status : <span class="badge text-bg-success">Tugas Selesai</span>
                 </div>
                 <!-- <span class="badge text-bg-primary rounded-pill">14</span> -->

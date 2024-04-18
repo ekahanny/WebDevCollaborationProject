@@ -1,12 +1,14 @@
 const express = require("express");
+const main = require("../controllers/index")
+const todolist = require("../controllers/todolist")
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  const data = {
-    layout: "layouts/main",
-    req,
-  };
-  res.render("index", data);
-});
+router.get("/", main.home);
+
+router.get('/todolist', todolist.index)
+router.get('/todolist/add', todolist.add)
+router.get('/todolist/history', todolist.history)
+router.post('/todolist', todolist.create)
+router.put('/todolist', todolist.update)
 
 module.exports = router;
