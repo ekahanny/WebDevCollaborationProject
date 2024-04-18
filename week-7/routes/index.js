@@ -1,6 +1,6 @@
 const express = require("express");
 const main = require("../controllers/index")
-const todolist = require("../controllers/todolist")
+const todolist = require("../controllers/todolistController")
 const router = express.Router();
 
 router.get("/", main.home);

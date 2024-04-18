@@ -1,7 +1,8 @@
-const todolist = require('../models/todolistModel')
+// const todolist = require('../models/todolistModel')
+const ToDoList = require('../models/todolist')
 
 const index = async (req, res) => {
-  const tasks = await todolist.findAll({
+  const tasks = await ToDoList.findAll({
     where: {
       status: 0
     },
@@ -25,7 +26,7 @@ const add = (req, res) => {
 };
 
 const history = async (req, res) => {
-  const tasksDone = await todolist.findAll({
+  const tasksDone = await ToDoList.findAll({
     where: {
       status: 1
     },
@@ -41,7 +42,7 @@ const history = async (req, res) => {
 
 const create = async (req, res) => {
   // insert data on table
-  await todolist.create({
+  await ToDoList.create({
     nama_tugas: req.body.nama_tugas,
     deadline: req.body.deadline,
     deskripsi: req.body.deskripsi,
@@ -52,7 +53,7 @@ const create = async (req, res) => {
 };
 
 const update = async (req, res) => {
-  await todolist.update(
+  await ToDoList.update(
     {
       status: 1
     },

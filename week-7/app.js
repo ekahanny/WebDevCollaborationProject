@@ -5,7 +5,6 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
 const methodOverride = require("method-override");
-const todolist = require('./models/todolistModel')
 const app = express();
 const port = 3000;
 
@@ -19,8 +18,6 @@ async function conDb() {
 }
 conDb()
 
-// const indexRoute = require("./routes/index");
-// const todolistRoute = require("./controllers/todolist");
 const router = require("./routes/index")
 
 app.set("view engine", "ejs");
