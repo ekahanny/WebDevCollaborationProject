@@ -24,14 +24,17 @@ npm start doc
 1. GET ``/books`` untuk mendapat seluruh data buku
 2. GET ``/books/:id`` untuk mendapatkan data buku sesuai id
 3. POST ``/books`` untuk menambahkan data buku baru
-   ```json
+
+```json
 {
     "title": "one piece last chapter",
     "author": "eichiro oda",
     "year": 2024
 }
 ```
+
 4. PUT ``/books/:id`` mengubah data buku sesuai id
+
 ```json
 {
     "title": "one piece last chapter april mop edition",
@@ -39,4 +42,5 @@ npm start doc
     "year": 2024
 }
 ```
+
 5. DELETE ``/books/:id`` menghapus data buku sesuai id
