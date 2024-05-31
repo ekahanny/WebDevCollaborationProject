@@ -1,0 +1,12 @@
+{
+    "source": {
+      "include": ["controllers"],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules|tests)"
+    },
+    "opts": {
+      "destination": "./docs"
+    },
+    "plugins": ["plugins/markdown"]
+  }
+  
