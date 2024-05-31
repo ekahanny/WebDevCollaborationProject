@@ -1,8 +1,10 @@
 // Import library yang diperlukan
-const express = require('express');
-const bodyParser = require('body-parser');
-const bookRoutes = require('./routes/bookRoutes');
+const express = require("express");
+const bodyParser = require("body-parser");
+const bookRoutes = require("./routes/bookRoutes");
+const { PrismaClient } = require("@prisma/client");
 
+const prisma = new PrismaClient();
 // Inisialisasi aplikasi Express
 const app = express();
 
@@ -13,11 +15,11 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 3000;
 
 // Route default
-app.get('/', (req, res) => {
-  res.send('Selamat datang di API Manajemen Buku!');
+app.get("/", (req, res) => {
+  res.send("Selamat datang di API Manajemen Buku!");
 });
 
-app.use('/', bookRoutes);
+app.use("/", bookRoutes);
 
 // Mulai server
 app.listen(PORT, () => {
